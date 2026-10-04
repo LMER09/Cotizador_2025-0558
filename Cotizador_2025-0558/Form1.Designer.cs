@@ -51,6 +51,8 @@
             btnCalcular = new Button();
             btnLimpiar = new Button();
             btnCopiar = new Button();
+            btnImperativo = new Button();
+            lstResultados = new ListBox();
             gbCotizador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudNoches).BeginInit();
             gbTotales.SuspendLayout();
@@ -67,6 +69,7 @@
             // 
             // gbCotizador
             // 
+            gbCotizador.BackColor = Color.AliceBlue;
             gbCotizador.Controls.Add(chkTemporadaAlta);
             gbCotizador.Controls.Add(nudNoches);
             gbCotizador.Controls.Add(txtTarifa);
@@ -78,7 +81,7 @@
             gbCotizador.Margin = new Padding(4, 3, 4, 3);
             gbCotizador.Name = "gbCotizador";
             gbCotizador.Padding = new Padding(4, 3, 4, 3);
-            gbCotizador.Size = new Size(421, 271);
+            gbCotizador.Size = new Size(439, 285);
             gbCotizador.TabIndex = 1;
             gbCotizador.TabStop = false;
             gbCotizador.Text = "Cotizador";
@@ -86,11 +89,12 @@
             // chkTemporadaAlta
             // 
             chkTemporadaAlta.AutoSize = true;
-            chkTemporadaAlta.ForeColor = Color.LimeGreen;
-            chkTemporadaAlta.Location = new Point(111, 225);
+            chkTemporadaAlta.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            chkTemporadaAlta.ForeColor = Color.MediumBlue;
+            chkTemporadaAlta.Location = new Point(89, 231);
             chkTemporadaAlta.Margin = new Padding(4, 3, 4, 3);
             chkTemporadaAlta.Name = "chkTemporadaAlta";
-            chkTemporadaAlta.Size = new Size(221, 27);
+            chkTemporadaAlta.Size = new Size(234, 29);
             chkTemporadaAlta.TabIndex = 7;
             chkTemporadaAlta.Text = "Temporada alta (+25%)";
             chkTemporadaAlta.UseVisualStyleBackColor = true;
@@ -108,7 +112,7 @@
             // 
             // txtTarifa
             // 
-            txtTarifa.Location = new Point(26, 180);
+            txtTarifa.Location = new Point(26, 186);
             txtTarifa.Margin = new Padding(4, 3, 4, 3);
             txtTarifa.Name = "txtTarifa";
             txtTarifa.Size = new Size(368, 30);
@@ -118,7 +122,7 @@
             // lblTarifa
             // 
             lblTarifa.AutoSize = true;
-            lblTarifa.Location = new Point(26, 154);
+            lblTarifa.Location = new Point(26, 160);
             lblTarifa.Margin = new Padding(4, 0, 4, 0);
             lblTarifa.Name = "lblTarifa";
             lblTarifa.Size = new Size(186, 23);
@@ -155,6 +159,7 @@
             // 
             // gbTotales
             // 
+            gbTotales.BackColor = Color.AliceBlue;
             gbTotales.Controls.Add(lblTotal);
             gbTotales.Controls.Add(lblServicio);
             gbTotales.Controls.Add(lblItbis);
@@ -165,11 +170,11 @@
             gbTotales.Controls.Add(lblItb);
             gbTotales.Controls.Add(lblDes);
             gbTotales.Controls.Add(lblSub);
-            gbTotales.Location = new Point(34, 289);
+            gbTotales.Location = new Point(499, 12);
             gbTotales.Margin = new Padding(4, 3, 4, 3);
             gbTotales.Name = "gbTotales";
             gbTotales.Padding = new Padding(4, 3, 4, 3);
-            gbTotales.Size = new Size(421, 223);
+            gbTotales.Size = new Size(469, 201);
             gbTotales.TabIndex = 8;
             gbTotales.TabStop = false;
             gbTotales.Text = "Totales";
@@ -178,7 +183,7 @@
             // 
             lblTotal.AutoSize = true;
             lblTotal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotal.Location = new Point(196, 169);
+            lblTotal.Location = new Point(196, 155);
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(53, 28);
             lblTotal.TabIndex = 10;
@@ -188,7 +193,7 @@
             // lblServicio
             // 
             lblServicio.AutoSize = true;
-            lblServicio.Location = new Point(205, 140);
+            lblServicio.Location = new Point(204, 123);
             lblServicio.Name = "lblServicio";
             lblServicio.Size = new Size(45, 23);
             lblServicio.TabIndex = 9;
@@ -198,7 +203,7 @@
             // lblItbis
             // 
             lblItbis.AutoSize = true;
-            lblItbis.Location = new Point(205, 107);
+            lblItbis.Location = new Point(204, 95);
             lblItbis.Name = "lblItbis";
             lblItbis.Size = new Size(45, 23);
             lblItbis.TabIndex = 8;
@@ -208,7 +213,7 @@
             // lblDescuento
             // 
             lblDescuento.AutoSize = true;
-            lblDescuento.Location = new Point(205, 74);
+            lblDescuento.Location = new Point(204, 65);
             lblDescuento.Name = "lblDescuento";
             lblDescuento.Size = new Size(45, 23);
             lblDescuento.TabIndex = 7;
@@ -218,7 +223,7 @@
             // lblSubtotal
             // 
             lblSubtotal.AutoSize = true;
-            lblSubtotal.Location = new Point(205, 41);
+            lblSubtotal.Location = new Point(204, 36);
             lblSubtotal.Name = "lblSubtotal";
             lblSubtotal.Size = new Size(45, 23);
             lblSubtotal.TabIndex = 6;
@@ -228,7 +233,7 @@
             // lblTot
             // 
             lblTot.AutoSize = true;
-            lblTot.Location = new Point(26, 179);
+            lblTot.Location = new Point(26, 160);
             lblTot.Margin = new Padding(4, 0, 4, 0);
             lblTot.Name = "lblTot";
             lblTot.Size = new Size(94, 23);
@@ -238,7 +243,7 @@
             // lblServi
             // 
             lblServi.AutoSize = true;
-            lblServi.Location = new Point(26, 140);
+            lblServi.Location = new Point(26, 123);
             lblServi.Margin = new Padding(4, 0, 4, 0);
             lblServi.Name = "lblServi";
             lblServi.Size = new Size(119, 23);
@@ -248,7 +253,7 @@
             // lblItb
             // 
             lblItb.AutoSize = true;
-            lblItb.Location = new Point(26, 107);
+            lblItb.Location = new Point(26, 95);
             lblItb.Margin = new Padding(4, 0, 4, 0);
             lblItb.Name = "lblItb";
             lblItb.Size = new Size(90, 23);
@@ -258,7 +263,7 @@
             // lblDes
             // 
             lblDes.AutoSize = true;
-            lblDes.Location = new Point(26, 74);
+            lblDes.Location = new Point(26, 65);
             lblDes.Margin = new Padding(4, 0, 4, 0);
             lblDes.Name = "lblDes";
             lblDes.Size = new Size(98, 23);
@@ -268,7 +273,7 @@
             // lblSub
             // 
             lblSub.AutoSize = true;
-            lblSub.Location = new Point(26, 41);
+            lblSub.Location = new Point(26, 36);
             lblSub.Margin = new Padding(4, 0, 4, 0);
             lblSub.Name = "lblSub";
             lblSub.Size = new Size(84, 23);
@@ -277,9 +282,9 @@
             // 
             // btnCalcular
             // 
-            btnCalcular.Location = new Point(34, 530);
+            btnCalcular.Location = new Point(34, 322);
             btnCalcular.Name = "btnCalcular";
-            btnCalcular.Size = new Size(105, 36);
+            btnCalcular.Size = new Size(119, 36);
             btnCalcular.TabIndex = 9;
             btnCalcular.Text = "Calcular";
             btnCalcular.UseVisualStyleBackColor = true;
@@ -287,9 +292,9 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(145, 530);
+            btnLimpiar.Location = new Point(159, 322);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(105, 36);
+            btnLimpiar.Size = new Size(119, 36);
             btnLimpiar.TabIndex = 10;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
@@ -297,19 +302,41 @@
             // 
             // btnCopiar
             // 
-            btnCopiar.Location = new Point(256, 530);
+            btnCopiar.Location = new Point(284, 322);
             btnCopiar.Name = "btnCopiar";
-            btnCopiar.Size = new Size(199, 36);
+            btnCopiar.Size = new Size(189, 36);
             btnCopiar.TabIndex = 11;
             btnCopiar.Text = "Copiar a WhatsApp";
             btnCopiar.UseVisualStyleBackColor = true;
             btnCopiar.Click += btnCopiar_Click;
             // 
+            // btnImperativo
+            // 
+            btnImperativo.Location = new Point(34, 386);
+            btnImperativo.Name = "btnImperativo";
+            btnImperativo.Size = new Size(439, 36);
+            btnImperativo.TabIndex = 12;
+            btnImperativo.Text = "Imperativo";
+            btnImperativo.UseVisualStyleBackColor = true;
+            btnImperativo.Click += btnImperativo_Click;
+            // 
+            // lstResultados
+            // 
+            lstResultados.BackColor = Color.AliceBlue;
+            lstResultados.FormattingEnabled = true;
+            lstResultados.Location = new Point(499, 224);
+            lstResultados.Name = "lstResultados";
+            lstResultados.Size = new Size(469, 211);
+            lstResultados.TabIndex = 13;
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(989, 639);
+            BackColor = Color.Azure;
+            ClientSize = new Size(1003, 466);
+            Controls.Add(lstResultados);
+            Controls.Add(btnImperativo);
             Controls.Add(btnCopiar);
             Controls.Add(btnLimpiar);
             Controls.Add(btnCalcular);
@@ -322,7 +349,7 @@
             MaximizeBox = false;
             Name = "frmInicio";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Villa Coral - Luzmairy E.R 2025-0558";
+            Text = "Cotizador Villa Coral - Luzmairy E.R 2025-0558";
             gbCotizador.ResumeLayout(false);
             gbCotizador.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nudNoches).EndInit();
@@ -357,5 +384,7 @@
         private Button btnCalcular;
         private Button btnLimpiar;
         private Button btnCopiar;
+        private Button btnImperativo;
+        private ListBox lstResultados;
     }
 }
