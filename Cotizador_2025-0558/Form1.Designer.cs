@@ -30,24 +30,24 @@
         {
             label1 = new Label();
             gbCotizador = new GroupBox();
-            lblHuesped = new Label();
-            txtHuesped = new TextBox();
-            lblNoches = new Label();
-            lblTarifa = new Label();
-            txtTarifa = new TextBox();
-            nudNoches = new NumericUpDown();
             chkTemporadaAlta = new CheckBox();
+            nudNoches = new NumericUpDown();
+            txtTarifa = new TextBox();
+            lblTarifa = new Label();
+            lblNoches = new Label();
+            txtHuesped = new TextBox();
+            lblHuesped = new Label();
             gbTotales = new GroupBox();
-            lblSubtotal = new Label();
-            lblDescuento = new Label();
-            lblItbis = new Label();
-            lblServicio = new Label();
-            lblTotal = new Label();
-            lblSub = new Label();
-            lblDes = new Label();
-            lblItb = new Label();
-            lblServi = new Label();
             lblTot = new Label();
+            lblServi = new Label();
+            lblItb = new Label();
+            lblDes = new Label();
+            lblSub = new Label();
+            lblTotal = new Label();
+            lblServicio = new Label();
+            lblItbis = new Label();
+            lblDescuento = new Label();
+            lblSubtotal = new Label();
             btnCalcular = new Button();
             btnLimpiar = new Button();
             gbCotizador.SuspendLayout();
@@ -82,63 +82,6 @@
             gbCotizador.TabStop = false;
             gbCotizador.Text = "Cotizador";
             // 
-            // lblHuesped
-            // 
-            lblHuesped.AutoSize = true;
-            lblHuesped.Location = new Point(26, 36);
-            lblHuesped.Margin = new Padding(4, 0, 4, 0);
-            lblHuesped.Name = "lblHuesped";
-            lblHuesped.Size = new Size(85, 23);
-            lblHuesped.TabIndex = 0;
-            lblHuesped.Text = "Huesped:";
-            // 
-            // txtHuesped
-            // 
-            txtHuesped.Location = new Point(26, 62);
-            txtHuesped.Margin = new Padding(4, 3, 4, 3);
-            txtHuesped.Name = "txtHuesped";
-            txtHuesped.Size = new Size(368, 30);
-            txtHuesped.TabIndex = 1;
-            // 
-            // lblNoches
-            // 
-            lblNoches.AutoSize = true;
-            lblNoches.Location = new Point(26, 95);
-            lblNoches.Margin = new Padding(4, 0, 4, 0);
-            lblNoches.Name = "lblNoches";
-            lblNoches.Size = new Size(72, 23);
-            lblNoches.TabIndex = 2;
-            lblNoches.Text = "Noches:";
-            // 
-            // lblTarifa
-            // 
-            lblTarifa.AutoSize = true;
-            lblTarifa.Location = new Point(26, 154);
-            lblTarifa.Margin = new Padding(4, 0, 4, 0);
-            lblTarifa.Name = "lblTarifa";
-            lblTarifa.Size = new Size(186, 23);
-            lblTarifa.TabIndex = 4;
-            lblTarifa.Text = "Tarifa por noche USD:";
-            // 
-            // txtTarifa
-            // 
-            txtTarifa.Location = new Point(26, 180);
-            txtTarifa.Margin = new Padding(4, 3, 4, 3);
-            txtTarifa.Name = "txtTarifa";
-            txtTarifa.Size = new Size(368, 30);
-            txtTarifa.TabIndex = 5;
-            txtTarifa.TextChanged += textBox1_TextChanged;
-            // 
-            // nudNoches
-            // 
-            nudNoches.Location = new Point(26, 121);
-            nudNoches.Margin = new Padding(4, 3, 4, 3);
-            nudNoches.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            nudNoches.Name = "nudNoches";
-            nudNoches.Size = new Size(188, 30);
-            nudNoches.TabIndex = 6;
-            nudNoches.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            // 
             // chkTemporadaAlta
             // 
             chkTemporadaAlta.AutoSize = true;
@@ -150,6 +93,63 @@
             chkTemporadaAlta.TabIndex = 7;
             chkTemporadaAlta.Text = "Temporada alta (+25%)";
             chkTemporadaAlta.UseVisualStyleBackColor = true;
+            // 
+            // nudNoches
+            // 
+            nudNoches.Location = new Point(26, 121);
+            nudNoches.Margin = new Padding(4, 3, 4, 3);
+            nudNoches.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nudNoches.Name = "nudNoches";
+            nudNoches.Size = new Size(188, 30);
+            nudNoches.TabIndex = 6;
+            nudNoches.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // txtTarifa
+            // 
+            txtTarifa.Location = new Point(26, 180);
+            txtTarifa.Margin = new Padding(4, 3, 4, 3);
+            txtTarifa.Name = "txtTarifa";
+            txtTarifa.Size = new Size(368, 30);
+            txtTarifa.TabIndex = 5;
+            txtTarifa.TextChanged += textBox1_TextChanged;
+            // 
+            // lblTarifa
+            // 
+            lblTarifa.AutoSize = true;
+            lblTarifa.Location = new Point(26, 154);
+            lblTarifa.Margin = new Padding(4, 0, 4, 0);
+            lblTarifa.Name = "lblTarifa";
+            lblTarifa.Size = new Size(186, 23);
+            lblTarifa.TabIndex = 4;
+            lblTarifa.Text = "Tarifa por noche USD:";
+            // 
+            // lblNoches
+            // 
+            lblNoches.AutoSize = true;
+            lblNoches.Location = new Point(26, 95);
+            lblNoches.Margin = new Padding(4, 0, 4, 0);
+            lblNoches.Name = "lblNoches";
+            lblNoches.Size = new Size(72, 23);
+            lblNoches.TabIndex = 2;
+            lblNoches.Text = "Noches:";
+            // 
+            // txtHuesped
+            // 
+            txtHuesped.Location = new Point(26, 62);
+            txtHuesped.Margin = new Padding(4, 3, 4, 3);
+            txtHuesped.Name = "txtHuesped";
+            txtHuesped.Size = new Size(368, 30);
+            txtHuesped.TabIndex = 1;
+            // 
+            // lblHuesped
+            // 
+            lblHuesped.AutoSize = true;
+            lblHuesped.Location = new Point(26, 36);
+            lblHuesped.Margin = new Padding(4, 0, 4, 0);
+            lblHuesped.Name = "lblHuesped";
+            lblHuesped.Size = new Size(85, 23);
+            lblHuesped.TabIndex = 0;
+            lblHuesped.Text = "Huesped:";
             // 
             // gbTotales
             // 
@@ -172,45 +172,50 @@
             gbTotales.TabStop = false;
             gbTotales.Text = "Totales";
             // 
-            // lblSubtotal
+            // lblTot
             // 
-            lblSubtotal.AutoSize = true;
-            lblSubtotal.Location = new Point(26, 41);
-            lblSubtotal.Margin = new Padding(4, 0, 4, 0);
-            lblSubtotal.Name = "lblSubtotal";
-            lblSubtotal.Size = new Size(84, 23);
-            lblSubtotal.TabIndex = 1;
-            lblSubtotal.Text = "Subtotal:";
+            lblTot.AutoSize = true;
+            lblTot.Location = new Point(171, 172);
+            lblTot.Name = "lblTot";
+            lblTot.Size = new Size(20, 23);
+            lblTot.TabIndex = 10;
+            lblTot.Text = "0";
             // 
-            // lblDescuento
+            // lblServi
             // 
-            lblDescuento.AutoSize = true;
-            lblDescuento.Location = new Point(26, 74);
-            lblDescuento.Margin = new Padding(4, 0, 4, 0);
-            lblDescuento.Name = "lblDescuento";
-            lblDescuento.Size = new Size(98, 23);
-            lblDescuento.TabIndex = 2;
-            lblDescuento.Text = "Descuento:";
+            lblServi.AutoSize = true;
+            lblServi.Location = new Point(171, 140);
+            lblServi.Name = "lblServi";
+            lblServi.Size = new Size(20, 23);
+            lblServi.TabIndex = 9;
+            lblServi.Text = "0";
             // 
-            // lblItbis
+            // lblItb
             // 
-            lblItbis.AutoSize = true;
-            lblItbis.Location = new Point(26, 107);
-            lblItbis.Margin = new Padding(4, 0, 4, 0);
-            lblItbis.Name = "lblItbis";
-            lblItbis.Size = new Size(50, 23);
-            lblItbis.TabIndex = 3;
-            lblItbis.Text = "Itbis:";
+            lblItb.AutoSize = true;
+            lblItb.Location = new Point(171, 107);
+            lblItb.Name = "lblItb";
+            lblItb.Size = new Size(20, 23);
+            lblItb.TabIndex = 8;
+            lblItb.Text = "0";
             // 
-            // lblServicio
+            // lblDes
             // 
-            lblServicio.AutoSize = true;
-            lblServicio.Location = new Point(26, 140);
-            lblServicio.Margin = new Padding(4, 0, 4, 0);
-            lblServicio.Name = "lblServicio";
-            lblServicio.Size = new Size(79, 23);
-            lblServicio.TabIndex = 4;
-            lblServicio.Text = "Servicio:";
+            lblDes.AutoSize = true;
+            lblDes.Location = new Point(171, 74);
+            lblDes.Name = "lblDes";
+            lblDes.Size = new Size(20, 23);
+            lblDes.TabIndex = 7;
+            lblDes.Text = "0";
+            // 
+            // lblSub
+            // 
+            lblSub.AutoSize = true;
+            lblSub.Location = new Point(171, 41);
+            lblSub.Name = "lblSub";
+            lblSub.Size = new Size(20, 23);
+            lblSub.TabIndex = 6;
+            lblSub.Text = "0";
             // 
             // lblTotal
             // 
@@ -222,50 +227,45 @@
             lblTotal.TabIndex = 5;
             lblTotal.Text = "Total:";
             // 
-            // lblSub
+            // lblServicio
             // 
-            lblSub.AutoSize = true;
-            lblSub.Location = new Point(171, 41);
-            lblSub.Name = "lblSub";
-            lblSub.Size = new Size(20, 23);
-            lblSub.TabIndex = 6;
-            lblSub.Text = "0";
+            lblServicio.AutoSize = true;
+            lblServicio.Location = new Point(26, 140);
+            lblServicio.Margin = new Padding(4, 0, 4, 0);
+            lblServicio.Name = "lblServicio";
+            lblServicio.Size = new Size(79, 23);
+            lblServicio.TabIndex = 4;
+            lblServicio.Text = "Servicio:";
             // 
-            // lblDes
+            // lblItbis
             // 
-            lblDes.AutoSize = true;
-            lblDes.Location = new Point(171, 74);
-            lblDes.Name = "lblDes";
-            lblDes.Size = new Size(20, 23);
-            lblDes.TabIndex = 7;
-            lblDes.Text = "0";
+            lblItbis.AutoSize = true;
+            lblItbis.Location = new Point(26, 107);
+            lblItbis.Margin = new Padding(4, 0, 4, 0);
+            lblItbis.Name = "lblItbis";
+            lblItbis.Size = new Size(50, 23);
+            lblItbis.TabIndex = 3;
+            lblItbis.Text = "Itbis:";
             // 
-            // lblItb
+            // lblDescuento
             // 
-            lblItb.AutoSize = true;
-            lblItb.Location = new Point(171, 107);
-            lblItb.Name = "lblItb";
-            lblItb.Size = new Size(20, 23);
-            lblItb.TabIndex = 8;
-            lblItb.Text = "0";
+            lblDescuento.AutoSize = true;
+            lblDescuento.Location = new Point(26, 74);
+            lblDescuento.Margin = new Padding(4, 0, 4, 0);
+            lblDescuento.Name = "lblDescuento";
+            lblDescuento.Size = new Size(98, 23);
+            lblDescuento.TabIndex = 2;
+            lblDescuento.Text = "Descuento:";
             // 
-            // lblServi
+            // lblSubtotal
             // 
-            lblServi.AutoSize = true;
-            lblServi.Location = new Point(171, 140);
-            lblServi.Name = "lblServi";
-            lblServi.Size = new Size(20, 23);
-            lblServi.TabIndex = 9;
-            lblServi.Text = "0";
-            // 
-            // lblTot
-            // 
-            lblTot.AutoSize = true;
-            lblTot.Location = new Point(171, 172);
-            lblTot.Name = "lblTot";
-            lblTot.Size = new Size(20, 23);
-            lblTot.TabIndex = 10;
-            lblTot.Text = "0";
+            lblSubtotal.AutoSize = true;
+            lblSubtotal.Location = new Point(26, 41);
+            lblSubtotal.Margin = new Padding(4, 0, 4, 0);
+            lblSubtotal.Name = "lblSubtotal";
+            lblSubtotal.Size = new Size(84, 23);
+            lblSubtotal.TabIndex = 1;
+            lblSubtotal.Text = "Subtotal:";
             // 
             // btnCalcular
             // 
@@ -275,6 +275,7 @@
             btnCalcular.TabIndex = 9;
             btnCalcular.Text = "Calcular";
             btnCalcular.UseVisualStyleBackColor = true;
+            btnCalcular.Click += btnCalcular_Click;
             // 
             // btnLimpiar
             // 
@@ -284,6 +285,7 @@
             btnLimpiar.TabIndex = 10;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // frmInicio
             // 
