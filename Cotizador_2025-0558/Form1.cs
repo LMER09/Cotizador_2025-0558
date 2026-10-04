@@ -33,9 +33,9 @@ namespace Cotizador_2025_0558
 
             var reserva = new Reserva
             {
-                Huesped = txtHuesped.Text,
+                Huesped = txtHuesped.Text.Trim(),
                 Noches = (int)nudNoches.Value,
-                TarifaPorNoche = decimal.Parse(txtTarifa.Text),
+                TarifaPorNoche = tarifa,
                 EsTemporadaAlta = chkTemporadaAlta.Checked
             };
 
@@ -44,11 +44,6 @@ namespace Cotizador_2025_0558
             lblItbis.Text = reserva.Itbis.ToString("N2");
             lblServicio.Text = reserva.Servicio.ToString("N2");
             lblTotal.Text = reserva.Total.ToString("N2");
-
-            MessageBox.Show(
-        $"Huésped: {txtHuesped.Text}\nNoches: {nudNoches.Value}\nTemporada alta: {chkTemporadaAlta.Checked}",
-        "Prueba de lectura");
-
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -62,6 +57,32 @@ namespace Cotizador_2025_0558
                 lblServicio.Text = lblTotal.Text = "0.00";
 
             txtHuesped.Focus();
+        }
+
+        private void btnCopiar_Click(object sender, EventArgs e)
+        {
+            if (lblTotal.Text == "0.00")
+            {
+                MessageBox.Show("Primero calcula una cotización.", "Nada que copiar",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var texto = $"""
+        *Cotización Villa Coral*
+        Huésped: {txtHuesped.Text}
+        Noches: {nudNoches.Value}
+        Subtotal: US$ {lblSubtotal.Text}
+        Descuento: US$ {lblDescuento.Text}
+        ITBIS 18%: US$ {lblItbis.Text}
+        Servicio 10%: US$ {lblServicio.Text}
+        *TOTAL: US$ {lblTotal.Text}*
+        """;
+
+            Clipboard.SetText(texto);
+
+            MessageBox.Show("Cotización copiada. Ya puedes pegarla en WhatsApp.", "Listo",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
