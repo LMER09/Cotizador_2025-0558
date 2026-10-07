@@ -104,5 +104,10 @@ namespace Cotizador_2025_0558
 
             lstResultados.Items.Add($"- Imperativo | {huesped} | US$ {total:N2}");
         }
+
+        private void frmInicio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

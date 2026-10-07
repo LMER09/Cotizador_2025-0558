@@ -170,11 +170,11 @@
             gbTotales.Controls.Add(lblItb);
             gbTotales.Controls.Add(lblDes);
             gbTotales.Controls.Add(lblSub);
-            gbTotales.Location = new Point(499, 12);
+            gbTotales.Location = new Point(34, 315);
             gbTotales.Margin = new Padding(4, 3, 4, 3);
             gbTotales.Name = "gbTotales";
             gbTotales.Padding = new Padding(4, 3, 4, 3);
-            gbTotales.Size = new Size(469, 201);
+            gbTotales.Size = new Size(439, 201);
             gbTotales.TabIndex = 8;
             gbTotales.TabStop = false;
             gbTotales.Text = "Totales";
@@ -282,7 +282,7 @@
             // 
             // btnCalcular
             // 
-            btnCalcular.Location = new Point(34, 322);
+            btnCalcular.Location = new Point(34, 555);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(119, 36);
             btnCalcular.TabIndex = 9;
@@ -292,7 +292,7 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(159, 322);
+            btnLimpiar.Location = new Point(159, 555);
             btnLimpiar.Name = "btnLimpiar";
             btnLimpiar.Size = new Size(119, 36);
             btnLimpiar.TabIndex = 10;
@@ -302,7 +302,7 @@
             // 
             // btnCopiar
             // 
-            btnCopiar.Location = new Point(284, 322);
+            btnCopiar.Location = new Point(284, 555);
             btnCopiar.Name = "btnCopiar";
             btnCopiar.Size = new Size(189, 36);
             btnCopiar.TabIndex = 11;
@@ -312,9 +312,9 @@
             // 
             // btnImperativo
             // 
-            btnImperativo.Location = new Point(34, 386);
+            btnImperativo.Location = new Point(493, 555);
             btnImperativo.Name = "btnImperativo";
-            btnImperativo.Size = new Size(439, 36);
+            btnImperativo.Size = new Size(469, 36);
             btnImperativo.TabIndex = 12;
             btnImperativo.Text = "Imperativo";
             btnImperativo.UseVisualStyleBackColor = true;
@@ -324,9 +324,9 @@
             // 
             lstResultados.BackColor = Color.AliceBlue;
             lstResultados.FormattingEnabled = true;
-            lstResultados.Location = new Point(499, 224);
+            lstResultados.Location = new Point(493, 29);
             lstResultados.Name = "lstResultados";
-            lstResultados.Size = new Size(469, 211);
+            lstResultados.Size = new Size(469, 487);
             lstResultados.TabIndex = 13;
             // 
             // frmInicio
@@ -334,7 +334,7 @@
             AutoScaleDimensions = new SizeF(10F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
-            ClientSize = new Size(1003, 466);
+            ClientSize = new Size(1003, 619);
             Controls.Add(lstResultados);
             Controls.Add(btnImperativo);
             Controls.Add(btnCopiar);
@@ -349,7 +349,8 @@
             MaximizeBox = false;
             Name = "frmInicio";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Cotizador Villa Coral - Luzmairy E.R 2025-0558";
+            Text = "Cotizador Villa Coral - Luzmairy Espiritusanto R 2025-0558";
+            Load += frmInicio_Load;
             gbCotizador.ResumeLayout(false);
             gbCotizador.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nudNoches).EndInit();
